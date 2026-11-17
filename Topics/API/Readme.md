@@ -93,7 +93,60 @@ API endpoints: These are locations where an API receives requests about a specif
 
 	PUT/api/user/update
 
-** we can replace update with "add", "delete" etc based on intital recon
+** we can replace update with "add", "delete" etc based on initial recon  
+
+10. Mass assignment vulnerabilities/ auto-binding
+    
+    a. software frameworks automatically bind request parameters to fields on an internal object.
+    
+    b. never intended to be processed by devs.
+
+ex request:  
+a. PATCH /api/users/  
+
+	{
+	    "username": "wiener",
+	    "email": "wiener@example.com",
+	}  
+
+b. GET /api/users/123  
+
+	{
+	    "id": 123,
+	    "name": "John Doe",
+	    "email": "john@example.com",
+	    "isAdmin": "false"
+	}
+
+** here "isAdmin" is the hidden parameter, exploit it with burp  
+
+
+11. Exploiting hidden parameters:
+    
+    a. Param miner BApp
+    
+    b. Content Discovery Tool
+
+12. Preventing Vulnerabilities in API:
+    
+    a. Securing documentation, to be not publicly accessible.
+    
+    b. Ensuring documentation is kept up to date so that legitimate testers have full visibility of the API's attack surface.
+    
+    c. Appling an allowlist of permitted HTTP methods.
+    
+    d. Validating that the content type is expected for each request or response.
+    
+    e. Using generic error messages to avoid giving away information that may be useful for an attacker.
+    
+    f. Use protective measures on all versions of your API, not just the current production version.
+    
+	h. To prevent mass assignment vulnerabilities, allowlist the properties that can be updated by the user, and blocklist sensitive properties that shouldn't be updated by the user. 
+
+	
+
+
+
 
 
  
