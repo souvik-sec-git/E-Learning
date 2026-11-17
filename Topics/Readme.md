@@ -4,7 +4,7 @@ API enable software systems and applications to communicate and share data.
 
 API endpoints: These are locations where an API receives requests about a specific resource on its server.
 
-1. Detect API endpoints
+1. Detect API endpoints:
 
    a.
 	   ex:   
@@ -18,7 +18,7 @@ API endpoints: These are locations where an API receives requests about a specif
    b. Lookout for javaScript files too - JS Link Finder BApp
    
 
-3. how to interact with them
+2. how to interact with them:
    
  	a. The input data the API processes.
 
@@ -28,29 +28,35 @@ API endpoints: These are locations where an API receives requests about a specif
 
 
 
-5. API are written in two types of format
+3. API are written in two types of format:
    
 	a. Human Readable(For devs in detailed explanations, ex, usage scenarios)
 
 	b. Machine Readable(JSON or XML for automation)
 
 
-7. Discovering API
+4. Discovering API:
+   
 	a. By browsing the applications
+
 	b. By crawling the applications using burp scanner or manually by burps browser
 
 
 
-9. If API resource endpoint is found, still we need to investigate the following paths.
+** If API resource endpoint is found, still we need to investigate the following paths.
    
 
-11. To test documented API endpoints: a. Postman B. SoapUI
+5. To test documented API endpoints:
+   
+    a. Postman
+   
+    B. SoapUI
     
 
-13. To Parse OpenAPI documentation using - OpenAPI Parser BApp
+6. To Parse OpenAPI documentation using - OpenAPI Parser BApp
     
 
-15. Supported HTTP Methods:
+7. Supported HTTP Methods:
     
 	a. GET
 
@@ -66,7 +72,7 @@ API endpoints: These are locations where an API receives requests about a specif
 ** also HTTP verb list can be used to cycle through range of methods  
 
 
-9. supported content types: changing content types may make it vulnerable. ex - JSON to XML
+8. supported content types: changing content types may make it vulnerable. ex - JSON to XML
     
 	a. Content-Type (changing directly)
 
@@ -81,7 +87,7 @@ API endpoints: These are locations where an API receives requests about a specif
 	c. vulnerable to SQLi, due to change in content type as there is difference in processing the logic.  
    
 
-10. Using intruder to find hidden endpoints
+9. Using intruder to find hidden endpoints
 
 	for ex:
 
